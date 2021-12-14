@@ -1,0 +1,34 @@
+body{
+    font-family: 'Ubuntu', sans-serif!important;
+}
+
+@media screen and (min-width: 500px) {
+    .min-500-hide{
+        display: none!important;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .min-900-hide{
+        display: none!important;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .max-900-hide{
+        display: none!important;
+    }
+    .jcsb{
+        justify-content: space-between!important;
+    }
+    .wrap-items{
+        flex-wrap:wrap;
+         justify-content: center;
+         padding-top: 2rem;
+    }
+    .margin-item{
+        margin: 0;
+        margin-bottom: 2rem;
+    }
+}
+

@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza App</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <!-- custom css -->
+    <link rel="stylesheet" href="./css/app.css">
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-light bg-light fixed-top">
+        <div class="px-5 container-fluid d-flex justify-content-start jcsb">
+            <button class="navbar-toggler min-900-hide" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <img width="75" height="75" src="./images/1665584.png" alt="">
+            </a>
+            <a href="" class="max-900-hide nav-link fs-4 fw-bold text-dark d-flex align-items-center justify-content-center">
+                <span class="material-icons" style="margin-right: 5px;">login</span>
+                Sign In
+            </a>
+            <a href="" class="max-900-hide nav-link fs-4 fw-bold text-dark">
+                <span class="material-icons" style="margin-right: 5px;">how_to_reg</span>
+                Create account
+            </a>
+            <a href="" class="max-900-hide nav-link fs-4 fw-bold text-dark flex-grow-1">
+                <span class="material-icons" style="margin-right: 5px;">location_on</span>
+                Find a Pizza Hut
+            </a>
+            <span class="p-1 min-900-hide badge bg-danger fs-5 max-900-hide">العربية</span>
+            <div class="offcanvas offcanvas-start min-500-hide" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header bg-danger d-flex flex-column">
+                    <div class="py-4 text-white d-flex align-items-center" style="padding-left: 8rem;">
+                        <p class="text fs-6 fw-light">register to open <span class="fw-bold">offers and sales</span></p>
+                        <a class="offcanvas-title" id="offcanvasNavbarLabel">
+                            <img width="100" height="100" src="./images/1665584.png" alt="">
+                        </a>
+                    </div>
+                    <button type="button" class="btn btn-outline-light w-100">Login</button>
+                </div>
+                <div class="offcanvas-body" style="padding: 0;">
+                    <ul class="navbar-nav justify-content-end flex-grow-1">
+                        <li class="px-4 py-2 nav-item d-flex justify-content-between align-items-center">
+                            <a class="nav-link active d-flex" aria-current="page" href="#">
+                                <span class="material-icons" style="margin-right: 10px;">public</span>
+                                Language / اللغة
+                            </a>
+                            <span class="badge bg-danger">العربية</span>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li> -->
+                        <li class="nav-item dropdown bg-light">
+                            <a class="px-4 py-2 nav-link dropdown-toggle d-flex align-items-center justify-content-between"
+                                href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <span class="d-flex">
+                                    <span class="material-icons" style="margin-right: 10px;">format_list_bulleted</span>
+                                    List
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-lg-end"
+                                style="background-color: #dbdbdb; border: none;"
+                                aria-labelledby="offcanvasNavbarDropdown">
+                                <li class="p-1">
+                                    <a class="dropdown-item" href="#">
+                                        <span class="material-icons" style="margin-right: 10px;">local_offer</span>
+                                        Offers
+                                    </a>
+                                </li>
+                                <li class="p-1">
+                                    <a class="dropdown-item" href="#">
+                                        <span class="material-icons" style="margin-right: 10px;">local_pizza</span>
+                                        Pizza
+                                    </a>
+                                </li>
+                                <li class="p-1">
+                                    <a class="dropdown-item" href="#">
+                                        <span class="material-icons" style="margin-right: 10px;">ramen_dining</span>
+                                        Salts
+                                    </a>
+                                </li>
+                                <li class="p-1">
+                                    <a class="dropdown-item" href="#">
+                                        <span class="material-icons" style="margin-right: 10px;">ramen_dining</span>
+                                        Salts
+                                    </a>
+                                </li>
+                                <li class="p-1">
+                                    <a class="dropdown-item" href="#">
+                                        <span class="material-icons" style="margin-right: 10px;">icecream</span>
+                                        icecream
+                                    </a>
+                                </li>
+                                <li class="p-1">
+                                    <a class="dropdown-item" href="#">
+                                        <span class="material-icons" style="margin-right: 10px;">nightlife</span>
+                                        nightlife
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form> -->
+                        <li class="px-4 py-2 nav-item">
+                            <a class="nav-link d-flex" href="#">
+                                <span class="material-icons" style="margin-right: 10px;">quiz</span>
+                                FAQ
+                            </a>
+                        </li>
+                        <li class="px-4 py-2 nav-item">
+                            <a class="nav-link d-flex" href="#">
+                                <span class="material-icons" style="margin-right: 10px;">gavel</span>
+                                Terms & Conditions
+                            </a>
+                        </li>
+                        <li class="px-4 py-2 nav-item">
+                            <a class="nav-link text-danger fw-bold" href="#">
+                                Call Us
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- header -->
+    <div class="flex-wrap p-5 bg-dark d-flex justify-content-between align-items-center text-uppercase" style="margin-top: 6rem;">
+        <div class="d-flex">
+            <a href="" class="nav-link fs-3 text-light fw-bold">deals</a>
+            <a href="" class="nav-link fs-3 text-light fw-bold">pizza</a>
+            <a href="" class="nav-link fs-3 text-light fw-bold">starters</a>
+            <a href="" class="nav-link fs-3 text-light fw-bold">salads</a>
+            <a href="" class="nav-link fs-3 text-light fw-bold">more</a>
+        </div>
+        <div class="d-flex align-items-center">
+            <button class="btn btn-success btn-lg text-uppercase" style="margin-right: 6rem;">Start Ordering</button>
+            <a href="" class="fs-3 nav-link text-light fw-bold">Cart</a>
+            <span class="fs-3 text-light">EGP 00.00</span>
+        </div>
+    </div>
+    <!-- slider -->
+    <div id="carouselExampleDark" class="p-5 carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+                <img src="./images/1.png" height="600" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="./images/2.png" height="600" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./images/3.png" height="600" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- exclusive deals -->
+    <div style="background-color: tomato;" class="p-5">
+        <div class="text-uppercase d-flex justify-content-between">
+            <i></i>
+            <h3 class="px-4 py-2 bg-danger text-light">exclusive deals</h3>
+            <a href="" class="d-flex justify-content-center align-items-center nav-link text-dark fw-bold fs-4">
+                view all
+                <span class="material-icons fs-1" style="margin-left: 5px;">keyboard_arrow_right</span>
+            </a>
+        </div>
+        <div class="mt-2 d-flex wrap-items">
+            <div class="mx-2 bg-white border card d-flex flex-column margin-item" style="width: 20rem;">
+                <img class="card-img-top" height="250" src="./images/box-1.jpg" alt="">
+                <div class="p-4">
+                    <h4 class="fw-bolder text-dark fs-4">Big Box Stuffed Crust</h4>
+                    <p class="text-muted fw-bold fs-5">1 cheese staff crist pizza medium...</p>
+                </div>
+                <div class="p-4 d-flex justify-content-between align-items-center">
+                    <span class="fw-bold text-dark fs-4">EGP 215.00</span>
+                    <button class="px-4 btn btn-success btn-lg">ADD</button>
+                </div>
+            </div>
+            <div class="mx-2 bg-white border card d-flex flex-column margin-item" style="width: 20rem;">
+                <img class="card-img-top" height="250" src="./images/box-2.jpg" alt="">
+                <div class="p-4">
+                    <h4 class="fw-bolder text-dark fs-4">My Box</h4>
+                    <p class="text-muted fw-bold fs-5">One Square Pzza + 2 Sides of the folowing items (( Buffallo...
+                    </p>
+                </div>
+                <div class="p-4 d-flex justify-content-between align-items-center">
+                    <span class="fw-bold text-dark fs-4">EGP 85.00</span>
+                    <button class="px-4 btn btn-success btn-lg">ADD</button>
+                </div>
+            </div>
+            <div class="mx-2 bg-white border card d-flex flex-column margin-item" style="width: 20rem;">
+                <img class="card-img-top" height="250" src="./images/box-3.png" alt="">
+                <div class="p-4">
+                    <h4 class="fw-bolder text-dark fs-4">Hut Savers Stuffed Crust Offer</h4>
+                    <p class="text-muted fw-bold fs-5">1 Medium Cheese Stuffed Crust pizza...</p>
+                </div>
+                <div class="p-4 d-flex justify-content-between align-items-center">
+                    <span class="fw-bold text-dark fs-4">EGP 185.00</span>
+                    <button class="px-4 btn btn-success btn-lg">ADD</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- popular products -->
+    <div class="p-5 bg-light">
+        <div class="text-uppercase d-flex justify-content-between">
+            <i></i>
+            <h3 class="px-4 py-2 bg-white text-light border-bottom border-danger text-dark">popular products</h3>
+            <a href="" class="d-flex justify-content-center align-items-center nav-link text-dark fw-bold fs-4">
+                view all
+                <span class="material-icons fs-1" style="margin-left: 5px;">keyboard_arrow_right</span>
+            </a>
+        </div>
+        <div class="mt-2 d-flex wrap-items">
+            <div class="mx-2 bg-white border card d-flex flex-column margin-item" style="width: 20rem;">
+                <img class="card-img-top" height="250" src="./images/order-1.jpg" alt="">
+                <div class="p-4">
+                    <span style="margin-top: -1.5rem; margin-left: -1rem;;"
+                        class="text-danger fw-bolder fs-4 justify-content-end d-flex align-items-center">
+                        Customize
+                        <span class="material-icons fs-3">keyboard_arrow_right</span>
+                    </span>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="fw-bolder text-dark fs-4">Classic Pepperoni</h4>
+                        <span class="material-icons text-danger fs-2">toggle_on</span>
+                    </div>
+                    <p class="text-muted fw-bold fs-6">One of our all time specialites. A meaty feast of <span
+                            class="text-danger fw-bold fs-6">..more</span></p>
+                </div>
+                <div class="px-4 d-flex justify-content-between">
+                    <select class="form-select bg-light fw-bold fs-6 text-capitalize" style="margin-right: 5px;"
+                        aria-label="Default select example">
+                        <option class="p-2 fs-4" value="1">ban</option>
+                        <option class="p-2 fs-4" value="">krespy</option>
+                        <option class="p-2 fs-4" value="">classic</option>
+                        <option class="p-2 fs-4" value="">staff</option>
+                        <option class="p-2 fs-4" value="">chees bits</option>
+                        <option class="p-2 fs-4" value="">beef & chees</option>
+                        <option class="p-2 fs-4" value="">garlic stuffed crust</option>
+                        <option class="p-2 fs-4" value="">parmesan stuffed crust</option>
+                    </select>
+                    <select class="form-select bg-light fw-bold fs-6 text-capitalize"
+                        aria-label="Default select example">
+                        <option class="p-2 fs-4" value="">small</option>
+                        <option class="p-2 fs-4" value="" selected>medium</option>
+                        <option class="p-2 fs-4" value="">large</option>
+                    </select>
+                </div>
+                <div class="p-4 mt-2 d-flex justify-content-between align-items-center">
+                    <span class="fw-bold text-dark fs-4">EGP 95.99</span>
+                    <button class="px-4 btn btn-success btn-lg">ADD</button>
+                </div>
+            </div>
+            <div class="mx-2 bg-white border card d-flex flex-column margin-item" style="width: 20rem;">
+                <img class="card-img-top" height="250" src="./images/order-2.jpg" alt="">
+                <div class="p-4">
+                    <span style="margin-top: -1.5rem; margin-left: -1rem;;"
+                        class="text-danger fw-bolder fs-4 justify-content-end d-flex align-items-center">
+                        Customize
+                        <span class="material-icons fs-3">keyboard_arrow_right</span>
+                    </span>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="fw-bolder text-dark fs-4">Chicken Supereme</h4>
+                        <span class="material-icons text-danger fs-2">toggle_on</span>
+                    </div>
+                    <p class="text-muted fw-bold fs-6">The ultimate mix of chickecn together with Mushrom<span
+                            class="text-danger fw-bold fs-6">..more</span></p>
+                </div>
+                <div class="px-4 d-flex justify-content-between">
+                    <select class="form-select bg-light fw-bold fs-6 text-capitalize" style="margin-right: 5px;"
+                        aria-label="Default select example">
+                        <option class="p-2 fs-4" value="1">ban</option>
+                        <option class="p-2 fs-4" value="">krespy</option>
+                        <option class="p-2 fs-4" value="">classic</option>
+                        <option class="p-2 fs-4" value="">staff</option>
+                        <option class="p-2 fs-4" value="">chees bits</option>
+                        <option class="p-2 fs-4" value="">beef & chees</option>
+                        <option class="p-2 fs-4" value="">garlic stuffed crust</option>
+                        <option class="p-2 fs-4" value="">parmesan stuffed crust</option>
+                    </select>
+                    <select class="form-select bg-light fw-bold fs-6 text-capitalize"
+                        aria-label="Default select example">
+                        <option class="p-2 fs-4" value="">small</option>
+                        <option class="p-2 fs-4" value="" selected>medium</option>
+                        <option class="p-2 fs-4" value="">large</option>
+                    </select>
+                </div>
+                <div class="p-4 mt-2 d-flex justify-content-between align-items-center">
+                    <span class="fw-bold text-dark fs-4">EGP 99.99</span>
+                    <button class="px-4 btn btn-success btn-lg">ADD</button>
+                </div>
+            </div>
+            <div class="mx-2 bg-white border card d-flex flex-column margin-item" style="width: 20rem;">
+                <img class="card-img-top" height="250" src="./images/order-3.jpg" alt="">
+                <div class="p-4">
+                    <span style="margin-top: -1.5rem; margin-left: -1rem;;"
+                        class="text-danger fw-bolder fs-4 justify-content-end d-flex align-items-center">
+                        Customize
+                        <span class="material-icons fs-3">keyboard_arrow_right</span>
+                    </span>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="fw-bolder text-dark fs-4">Classic Pepperoni</h4>
+                        <span class="material-icons text-danger fs-2">toggle_on</span>
+                    </div>
+                    <p class="text-muted fw-bold fs-6">One of our all time specialites. A meaty feast of <span
+                            class="text-danger fw-bold fs-6">..more</span></p>
+                </div>
+                <div class="px-4 d-flex justify-content-between">
+                    <select class="form-select bg-light fw-bold fs-6 text-capitalize" style="margin-right: 5px;"
+                        aria-label="Default select example">
+                        <option class="p-2 fs-4" value="1">ban</option>
+                        <option class="p-2 fs-4" value="">krespy</option>
+                        <option class="p-2 fs-4" value="">classic</option>
+                        <option class="p-2 fs-4" value="">staff</option>
+                        <option class="p-2 fs-4" value="">chees bits</option>
+                        <option class="p-2 fs-4" value="">beef & chees</option>
+                        <option class="p-2 fs-4" value="">garlic stuffed crust</option>
+                        <option class="p-2 fs-4" value="">parmesan stuffed crust</option>
+                    </select>
+                    <select class="form-select bg-light fw-bold fs-6 text-capitalize"
+                        aria-label="Default select example">
+                        <option class="p-2 fs-4" value="">small</option>
+                        <option class="p-2 fs-4" value="" selected>medium</option>
+                        <option class="p-2 fs-4" value="">large</option>
+                    </select>
+                </div>
+                <div class="p-4 mt-2 d-flex justify-content-between align-items-center">
+                    <span class="fw-bold text-dark fs-4">EGP 95.99</span>
+                    <button class="px-4 btn btn-success btn-lg">ADD</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- app banner -->
+    <div class="bg-light">
+        <img src="./images/banner.jpg" class="img-fluid" alt="">
+    </div>
+    <!-- footer -->
+    <footer class="bg-dark">
+        <div class="flex-wrap p-5 d-flex justify-content-between w-50 fw-bold fs-4">
+            <a href="" class="nav-link text-light">Deals</a>
+            <a href="" class="nav-link text-light">About Us</a>
+            <a href="" class="nav-link text-light">Customer Services</a>
+            <a href="" class="nav-link text-light">Policies</a>
+            <a href="" class="nav-link text-light">Nutrition</a>
+        </div>
+        <div class="flex-wrap p-5 mt-2 text-white d-flex justify-content-between align-items-center fw-bold">
+            <div class="d-flex justify-content-between">
+                <span class="text-secondary fs-5" style="margin-right: 2rem;">Connect with Pizza app</span>
+                <div class="">
+                    <img style="margin-right: 10px;" src="./images/fb.png" width="25" height="25" alt="">
+                    <img style="margin-right: 10px;" src="./images/insta.png" width="25" height="25" alt="">
+                    <img style="margin-right: 10px;" src="./images/twitter.png" width="25" height="25" alt="">
+                    <img src="./images/yt.png" width="25" height="25" alt="">
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-between w-25 align-items-center">
+                <span>Select Country</span>
+                <a href="" class="nav-link text-light">
+                    <img style="margin-right: 5px;" src="./images/egypt.png" width="25" height="25" alt="">
+                    Egypt
+                </a>
+                <a href="" class="nav-link text-success">Change</a>
+            </div>
+        </div>
+        <div class="bg-secondary">
+            <span class="px-5 py-1 text-center text-wrap fw-bold fs-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non consectetur rem nulla consequuntur
+                , iure sequi, qui similique reiciendis quo fuga eos
+                dolore aspernatur.</span>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
